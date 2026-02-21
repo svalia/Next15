@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next15 - Quit Smoking Gradually</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">Next15</div>
+            <div class="nav-links">
+                <a href="#features" data-i18n="nav_features">Features</a>
+                <a href="#screens" data-i18n="nav_screenshots">Screenshots</a>
+                <select id="lang-select" class="lang-select">
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="fi">Suomi</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="ko">한국어</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="pl">Polski</option>
+                    <option value="pt-BR">Português</option>
+                    <option value="zh-Hans">简体中文</option>
+                    <option value="cs">Čeština</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 data-i18n="hero_title">Quit Smoking, 15 Minutes at a Time</h1>
+                <p data-i18n="hero_subtitle">Based on James Clear's "Atomic Habits". Build a smoke-free life gradually,
+                    without stress or cold turkey.</p>
+                <a href="#" class="btn-primary" data-i18n="hero_cta">Download on the App Store</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/Screen1.png" alt="App Screen" class="mockup">
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3 data-i18n="method_title">The Atomic Habits Method</h3>
+                    <p data-i18n="method_desc">We don't force you to quit instantly. Instead, after each cigarette, your
+                        interval increases by 15 minutes. Small, manageable steps lead to massive long-term results.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👀</div>
+                    <h3 data-i18n="live_title">Always in Sight</h3>
+                    <p data-i18n="live_desc">With iOS Live Activities on your Lock Screen and Dynamic Island, your
+                        current interval is always visible, helping you stay focused.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3 data-i18n="cards_title">Motivation Cards</h3>
+                    <p data-i18n="cards_desc">Read personalized and default motivation cards to push through cravings
+                        and prevent relapses.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 data-i18n="transition_title">Automatic Transition</h3>
+                    <p data-i18n="transition_desc">Once your smoke-free interval naturally reaches 24 hours, Next15
+                        automatically switches to "Smoke-Free" mode.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="screens" class="screenshots">
+        <div class="container">
+            <h2 class="section-title" data-i18n="screens_section">App Screenshots</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" aria-label="Previous" onclick="scrollCarousel(-1)">&#10094;</button>
+                <div class="scroll-container" id="screenshot-scroll">
+                    <img src="assets/images/Screen2.png" alt="Screen 2">
+                    <img src="assets/images/Screen3.png" alt="Screen 3">
+                    <img src="assets/images/Screen4.png" alt="Screen 4">
+                    <img src="assets/images/Screen5.png" alt="Screen 5">
+                    <img src="assets/images/Screen6.png" alt="Screen 6">
+                    <img src="assets/images/Screen7.png" alt="Screen 7">
+                </div>
+                <button class="carousel-btn next" aria-label="Next" onclick="scrollCarousel(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">Next15</div>
+            <div class="footer-legal">
+                <a href="assets/docs/Terms_of_Use_En.pdf" id="link-terms" target="_blank" data-i18n="footer_terms">Terms
+                    of Use</a>
+                <a href="assets/docs/Privacy_Policy_En.pdf" id="link-privacy" target="_blank"
+                    data-i18n="footer_privacy">Privacy Policy</a>
+                <a href="assets/docs/Consent_to_Personal_Data_Processing_En.pdf" id="link-processing" target="_blank"
+                    data-i18n="footer_processing">Personal Data Processing</a>
+            </div>
+            <div class="footer-copy">© 2026 Next15. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script>
+        function scrollCarousel(direction) {
+            const container = document.getElementById('screenshot-scroll');
+            const scrollAmount = 350; // Approximated width of image + gap
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
