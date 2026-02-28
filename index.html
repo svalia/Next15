@@ -17,7 +17,6 @@
             <div class="logo">Next15</div>
             <div class="nav-links">
                 <a href="#how" data-i18n="nav_how">How it works</a>
-                <a href="#calculator" data-i18n="nav_calc">Calculator</a>
                 <a href="#method" data-i18n="nav_method">Method</a>
                 <a href="#faq" data-i18n="nav_faq">FAQ</a>
                 <select id="lang-select" class="lang-select">
@@ -60,24 +59,7 @@
         </div>
     </header>
 
-    <!-- 3. Calculator (Interactive) -->
-    <section id="calculator" class="calculator dark-section">
-        <div class="container calc-container">
-            <h2 data-i18n="calc_title">Find out when you will smoke your last cigarette</h2>
-            <div class="calc-box glass">
-                <label for="cigs" data-i18n="calc_label">How many cigarettes do you smoke per day?</label>
-                <div class="calc-input-wrapper">
-                    <input type="number" id="cigs" min="1" max="100" value="15">
-                    <button class="btn-primary" id="calc-btn" data-i18n="calc_btn">Calculate my freedom plan</button>
-                </div>
-                <div id="calc-result" class="calc-result" style="display: none;">
-                    <span data-i18n="calc_res_pre">Following Next15's gentle intervals, your Freedom Goal is </span>
-                    <strong id="calc-date"></strong>
-                    <span data-i18n="calc_res_post"> — without harsh withdrawal!</span>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Aha Moment & Core Jobs -->
     <section id="how" class="features">
@@ -266,9 +248,12 @@
     <!-- Final CTA -->
     <section class="final-cta dark-section text-center p-80">
         <div class="container">
-            <h2 class="section-title mb-60" data-i18n="cta_title">Start your journey to free lungs and millions of saved
-                nerve cells today.</h2>
-            <a href="#" class="btn-primary glow-btn" data-i18n="hero_cta">Download on the App Store</a>
+            <h2 class="section-title mb-60" data-i18n="cta_title"
+                style="max-width: 800px; margin: 0 auto 40px auto; line-height: 1.4;">
+                Start now and following interval smoking you will become free from nicotine by {date}.
+            </h2>
+            <a href="#" class="btn-primary glow-btn" data-i18n="cta_btn"
+                style="font-size: 18px; padding: 16px 40px;">Start</a>
         </div>
     </section>
 
@@ -289,35 +274,43 @@
 
     <script src="js/i18n.js"></script>
     <script>
-        document.getElementById('calc-btn').addEventListener('click', () => {
-            const cigs = parseInt(document.getElementById('cigs').value);
-            if (cigs > 0) {
-                // Exact replication of iOS 'IntervalCalculator.swift'
-                const targetInterval = 960; // 16 hours
-                const currentIntervalMinutes = Math.floor(960 / Math.max(1, cigs));
+        window.onLanguageChanged = function (lang) {
+            // Assume 15 cigs/day for the marketing calculation
+            const cigs = 15;
+            const targetInterval = 960; // 16 hours
+            const currentIntervalMinutes = Math.floor(960 / Math.max(1, cigs));
 
-                let stepsRemaining = 0;
-                let totalMinutesRemaining = 0;
+            let stepsRemaining = 0;
+            let totalMinutesRemaining = 0;
 
-                if (currentIntervalMinutes < targetInterval) {
-                    const minutesToIncrease = targetInterval - currentIntervalMinutes;
-                    stepsRemaining = Math.ceil(minutesToIncrease / 15);
+            if (currentIntervalMinutes < targetInterval) {
+                const minutesToIncrease = targetInterval - currentIntervalMinutes;
+                stepsRemaining = Math.ceil(minutesToIncrease / 15);
 
-                    totalMinutesRemaining = (stepsRemaining * currentIntervalMinutes) +
-                        (15 * stepsRemaining * (stepsRemaining - 1) / 2);
-                }
+                totalMinutesRemaining = (stepsRemaining * currentIntervalMinutes) +
+                    (15 * stepsRemaining * (stepsRemaining - 1) / 2);
+            }
 
-                // Calculate target date
-                const targetDate = new Date();
-                targetDate.setMinutes(targetDate.getMinutes() + totalMinutesRemaining);
+            // Calculate target date
+            const targetDate = new Date();
+            targetDate.setMinutes(targetDate.getMinutes() + totalMinutesRemaining);
 
-                // Format date based on current selected language
-                const currentLang = document.getElementById('lang-select').value || 'en';
-                const options = { day: 'numeric', month: 'long', year: 'numeric' };
-                const formattedDate = targetDate.toLocaleDateString(currentLang, options);
+            // Format date based on current selected language
+            const options = { day: 'numeric', month: 'long', year: 'numeric' };
+            const formattedDate = targetDate.toLocaleDateString(lang, options);
 
-                document.getElementById('calc-date').textContent = formattedDate;
-                document.getElementById('calc-result').style.display = 'block';
+            const ctaTitle = document.querySelector('[data-i18n="cta_title"]');
+            if (ctaTitle && ctaTitle.textContent.includes('{date}')) {
+                // To keep color emphasis
+                ctaTitle.innerHTML = ctaTitle.textContent.replace('{date}', `<span style="color: var(--accent-cyan); white-space: nowrap;">${formattedDate}</span>`);
+            }
+        };
+
+        // Fire initial calculation in case language script already executed
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentLang = document.getElementById('lang-select').value || 'en';
+            if (window.onLanguageChanged) {
+                setTimeout(() => window.onLanguageChanged(currentLang), 50);
             }
         });
     </script>

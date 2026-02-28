@@ -11,10 +11,6 @@ const translations = {
     hero_qr_text: "Scan to Install",
 
     calc_title: "Find out when you will smoke your last cigarette",
-    calc_label: "How many cigarettes do you smoke per day?",
-    calc_btn: "Calculate my freedom plan",
-    calc_res_pre: "Following Next15's gentle intervals, your Freedom Goal is ",
-    calc_res_post: " — without harsh withdrawal!",
 
     aha_title: "How it works",
     aha_desc: "We don't force you to throw away your pack right now. You will continue to smoke, but each time the interval will imperceptibly increase.",
@@ -67,7 +63,8 @@ const translations = {
     comp3_title: "❌ Ordinary 'Days Without Smoke' trackers",
     comp3_desc: "They only record the finale and demotivate by resetting to zero at the slightest mistake. We hold your hand through the hardest stage - the weaning process.",
 
-    cta_title: "Start your journey to free lungs and millions of saved nerve cells today.",
+    cta_title: "Start now and following interval smoking you will become free from nicotine by {date}.",
+    cta_btn: "Start",
 
     footer_terms: "Terms of Use",
     footer_privacy: "Privacy Policy",
@@ -85,10 +82,6 @@ const translations = {
     hero_qr_text: "Наведи камеру для скачивания",
 
     calc_title: "Узнайте, когда вы выкурите свою последнюю сигарету",
-    calc_label: "Сколько сигарет вы выкуриваете в день?",
-    calc_btn: "Рассчитать мой план",
-    calc_res_pre: "Следуя мягким интервалам Next15, ваша дата свободы — ",
-    calc_res_post: " — без жестких ломок!",
 
     aha_title: "Как это работает",
     aha_desc: "Мы не заставляем вас выбрасывать пачку прямо сейчас. Вы продолжите курить, но с каждым разом интервал будет незаметно увеличиваться.",
@@ -141,7 +134,8 @@ const translations = {
     comp3_title: "❌ Обычные счетчики 'Дней без дыма'",
     comp3_desc: "Они демотивируют полным обнулением при малейшей ошибке. Забудьте про счетчики! Мы ведем вас за руку на процессе отвыкания.",
 
-    cta_title: "Начните путь к свободным легким и миллионам сэкономленных нервных клеток уже сегодня.",
+    cta_title: "Начни сейчас и, следуя интервальному курению, ты станешь свободным от никотина уже к {date}.",
+    cta_btn: "Начать",
 
     footer_terms: "Условия использования",
     footer_privacy: "Политика конфиденциальности",
@@ -191,6 +185,10 @@ function setLanguage(lang) {
   document.getElementById('link-terms').href = docs.terms;
   document.getElementById('link-privacy').href = docs.privacy;
   document.getElementById('link-processing').href = docs.processing;
+
+  if (typeof window.onLanguageChanged === 'function') {
+    window.onLanguageChanged(lang);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
