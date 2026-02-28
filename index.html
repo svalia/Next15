@@ -16,7 +16,7 @@
         <div class="container nav-content">
             <div class="logo">Next15</div>
             <div class="nav-links">
-                <a href="#features" data-i18n="nav_features">Features</a>
+                <a href="#calculator" data-i18n="nav_features">Features</a>
                 <a href="#screens" data-i18n="nav_screenshots">Screenshots</a>
                 <select id="lang-select" class="lang-select">
                     <option value="en">English</option>
@@ -36,71 +36,232 @@
         </div>
     </nav>
 
+    <!-- 1. Oneliner -->
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1 data-i18n="hero_title">Quit Smoking, 15 Minutes at a Time</h1>
-                <p data-i18n="hero_subtitle">Based on James Clear's "Atomic Habits". Build a smoke-free life gradually,
-                    without stress or cold turkey.</p>
-                <a href="#" class="btn-primary" data-i18n="hero_cta">Download on the App Store</a>
+                <h1 data-i18n="hero_title">Next15 - Quit Smoking Gradually</h1>
+                <p data-i18n="hero_subtitle">Build a smoke-free life gradually, until the physical and psychological
+                    craving disappears without stress or relapses.</p>
+                <a href="#" class="btn-primary glow-btn" data-i18n="hero_cta">Download on the App Store</a>
             </div>
             <div class="hero-image">
-                <img src="assets/images/Screen1.png" alt="App Screen" class="mockup">
+                <img src="assets/images/Screen1_en.png" data-i18n-src="assets/images/Screen1" alt="App Screen"
+                    class="mockup">
             </div>
         </div>
     </header>
 
-    <section id="features" class="features">
-        <div class="container">
-            <div class="feature-grid">
-
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3 data-i18n="method_title">The Atomic Habits Method</h3>
-                    <p data-i18n="method_desc">We don't force you to quit instantly. Instead, after each cigarette, your
-                        interval increases by 15 minutes. Small, manageable steps lead to massive long-term results.</p>
+    <!-- 3. Calculator (Interactive) -->
+    <section id="calculator" class="calculator dark-section">
+        <div class="container calc-container">
+            <h2 data-i18n="calc_title">Find out when you will smoke your last cigarette</h2>
+            <div class="calc-box glass">
+                <label for="cigs" data-i18n="calc_label">How many cigarettes do you smoke per day?</label>
+                <div class="calc-input-wrapper">
+                    <input type="number" id="cigs" min="1" max="100" value="15">
+                    <button class="btn-primary" id="calc-btn" data-i18n="calc_btn">Calculate my freedom plan</button>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">👀</div>
-                    <h3 data-i18n="live_title">Always in Sight</h3>
-                    <p data-i18n="live_desc">With iOS Live Activities on your Lock Screen and Dynamic Island, your
-                        current interval is always visible, helping you stay focused.</p>
+                <div id="calc-result" class="calc-result" style="display: none;">
+                    <span data-i18n="calc_res_pre">Following Next15's gentle intervals, you will become completely
+                        independent in </span>
+                    <strong id="calc-weeks"></strong>
+                    <span data-i18n="calc_res_post"> weeks — without harsh withdrawal!</span>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3 data-i18n="cards_title">Motivation Cards</h3>
-                    <p data-i18n="cards_desc">Read personalized and default motivation cards to push through cravings
-                        and prevent relapses.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">✨</div>
-                    <h3 data-i18n="transition_title">Automatic Transition</h3>
-                    <p data-i18n="transition_desc">Once your smoke-free interval naturally reaches 24 hours, Next15
-                        automatically switches to "Smoke-Free" mode.</p>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <section id="screens" class="screenshots">
+    <!-- Aha Moment & Core Jobs -->
+    <section class="features">
+        <div class="container text-center mb-60">
+            <h2 class="section-title" data-i18n="aha_title">How it works</h2>
+            <p class="section-subtitle mx-auto" data-i18n="aha_desc">We don't force you to throw away your pack right
+                now. You will continue to smoke, but each time the interval will imperceptibly increase.</p>
+        </div>
         <div class="container">
-            <h2 class="section-title" data-i18n="screens_section">App Screenshots</h2>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn prev" aria-label="Previous" onclick="scrollCarousel(-1)">&#10094;</button>
-                <div class="scroll-container" id="screenshot-scroll">
-                    <img src="assets/images/Screen2.png" alt="Screen 2">
-                    <img src="assets/images/Screen3.png" alt="Screen 3">
-                    <img src="assets/images/Screen4.png" alt="Screen 4">
-                    <img src="assets/images/Screen5.png" alt="Screen 5">
-                    <img src="assets/images/Screen6.png" alt="Screen 6">
-                    <img src="assets/images/Screen7.png" alt="Screen 7">
+            <div class="feature-grid">
+                <div class="feature-card glass">
+                    <div class="feature-icon">⏳</div>
+                    <h3 data-i18n="value1_title">No more cold turkey</h3>
+                    <p data-i18n="value1_desc">The app automatically increases the timer by just 15 minutes every day.
+                        Your body weaning off nicotine gradually.</p>
                 </div>
-                <button class="carousel-btn next" aria-label="Next" onclick="scrollCarousel(1)">&#10095;</button>
+                <div class="feature-card glass">
+                    <div class="feature-icon">💡</div>
+                    <h3 data-i18n="value2_title">Motivation in crises</h3>
+                    <p data-i18n="value2_desc">In critical moments of stress, you are not alone. The app knows your
+                        weaknesses and throws SOS cards.</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="feature-icon">📈</div>
+                    <h3 data-i18n="value3_title">Real-time Tracking</h3>
+                    <p data-i18n="value3_desc">Motivation doesn't fade when backed by numbers. Watch your intervals grow
+                        and 'Smoke-Free' hours multiply.</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="feature-icon">🔄</div>
+                    <h3 data-i18n="value4_title">Smart Relapse Analysis</h3>
+                    <p data-i18n="value4_desc">Relapsed at a party? The app won't reset your progress, but will offer a
+                        short relapse tracker to extract insights.</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Recognize Yourself -->
+    <section class="recognize dark-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-i18n="recognize_title">Do you recognize yourself?</h2>
+            <p class="section-subtitle text-center mx-auto mb-60" data-i18n="recognize_subtitle">Remember your past
+                attempts to quit. Do you want to finally breathe freely and stop being a slave to your habit?</p>
+
+            <div class="split-grid">
+                <div class="split-card error-card glass">
+                    <div class="feature-icon">☕</div>
+                    <h3 data-i18n="trigger1_title">Trigger 1: Morning Coffee</h3>
+                    <p data-i18n="trigger1_desc">The perfect 'I won't smoke today' plan crumbles after the first cup of
+                        coffee. You feel empty and guilty. Again you relapsed.</p>
+                </div>
+                <div class="split-card error-card glass">
+                    <div class="feature-icon">📞</div>
+                    <h3 data-i18n="trigger2_title">Trigger 2: Stressful Work Call</h3>
+                    <p data-i18n="trigger2_desc">Nerves are on edge, your feet carry you outside. Patches and pills
+                        don't solve the main problem - you physically need to distract yourself.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How we do the job -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title text-center mb-60" data-i18n="how_title">How you will quit smoothly and forever
+            </h2>
+
+            <div class="how-row reverse">
+                <div class="how-text">
+                    <h3 data-i18n="how1_title">Smart Smoking Timer</h3>
+                    <p data-i18n="how1_desc">No more chaos. A clear schedule of smoke breaks with a smooth 15-minute
+                        step allows the brain to get used to dose reduction without panic.</p>
+                </div>
+                <div class="how-image">
+                    <img src="assets/images/Screen2_en.png" data-i18n-src="assets/images/Screen2" alt="Timer">
+                </div>
+            </div>
+
+            <div class="how-row">
+                <div class="how-image">
+                    <img src="assets/images/Story_en.png" data-i18n-src="assets/images/Story" alt="Stories">
+                </div>
+                <div class="how-text">
+                    <h3 data-i18n="how2_title">Widescreen Story Motivators</h3>
+                    <p data-i18n="how2_desc">Emergency focus relaxation. When the timer is still ticking but the craving
+                        is painful, swipe through stories. 3 minutes of reading calm the brain.</p>
+                </div>
+            </div>
+
+            <div class="how-row reverse">
+                <div class="how-text">
+                    <h3 data-i18n="how3_title">Intelligent Relapse Tracking</h3>
+                    <p data-i18n="how3_desc">Learning from mistakes instead of self-flagellation. Analyzing the causes
+                        of a relapse teaches you to bypass triggers, turning weakness into useful experience.</p>
+                </div>
+                <div class="how-image">
+                    <img src="assets/images/Screen4_en.png" data-i18n-src="assets/images/Screen4" alt="Relapse Tracker">
+                </div>
+            </div>
+
+            <div class="how-row">
+                <div class="how-image">
+                    <img src="assets/images/Screen6_en.png" data-i18n-src="assets/images/Screen6" alt="Freedom Mode">
+                </div>
+                <div class="how-text">
+                    <h3 data-i18n="how4_title">Transition to Freedom Mode</h3>
+                    <p data-i18n="how4_desc">Dopamine from a real victory. Monitoring health recovery gives you pride
+                        for every clean day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Point B -->
+    <section class="point-b gradient-section">
+        <div class="container text-center">
+            <h2 class="section-title" data-i18n="point_b_title">Imagine you've already walked this path...</h2>
+            <div class="pb-grid">
+                <div class="pb-card glass">
+                    <div class="pb-emoji">🏆</div>
+                    <p data-i18n="point_b_1">Incredible Pride. The day your interval reaches 0. You proved to yourself
+                        you can control your habit loop.</p>
+                </div>
+                <div class="pb-card glass">
+                    <div class="pb-emoji">🍃</div>
+                    <p data-i18n="point_b_2">Absolute Lightness. No more morning cough. Your clothes and breath always
+                        smell like perfume, not tobacco.</p>
+                </div>
+                <div class="pb-card glass">
+                    <div class="pb-emoji">🧘</div>
+                    <p data-i18n="point_b_3">Mental Calmness. No more frantically looking for a tobacco kiosk or getting
+                        nervous on long flights. A cigarette is no longer a crutch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lowering Barriers & Competitors -->
+    <section class="barriers dark-section">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-left">
+                    <h2 class="section-title text-left" data-i18n="barriers_title">Clearing Doubts</h2>
+                    <div class="faq glass">
+                        <h4 data-i18n="barrier1_title">I've relapsed so many times, it's useless.</h4>
+                        <p data-i18n="barrier1_desc">Our method is built for those who relapse. Intervals grow so
+                            microscopically that the body doesn't notice. If you relapse, we don't reset progress, we
+                            help analyze it.</p>
+
+                        <h4 data-i18n="barrier2_title" class="mt-20">I'll be terribly irritable the first week.</h4>
+                        <p data-i18n="barrier2_desc">No 'Cold Turkey' shock. You continue to smoke at the beginning,
+                            just consciously and on schedule. Stress levels remain under control.</p>
+
+                        <h4 data-i18n="barrier3_title" class="mt-20">What if it doesn't work for me?</h4>
+                        <p data-i18n="barrier3_desc">You will notice a reduction in smoking on the very first weekend.
+                            We focus on small habits that form the foundation of major success without pressure.</p>
+                    </div>
+                </div>
+                <div class="split-right">
+                    <h2 class="section-title text-left" data-i18n="competitors_title">Why familiar methods make you run
+                        in circles</h2>
+                    <div class="competitor-list">
+                        <div class="comp-item glass">
+                            <h4 data-i18n="comp1_title">❌ Willpower / Quitting abruptly</h4>
+                            <p data-i18n="comp1_desc">Willpower depletes by evening. We replace self-violence with a
+                                technological system of small steps.</p>
+                        </div>
+                        <div class="comp-item glass">
+                            <h4 data-i18n="comp2_title">❌ Books and Courses</h4>
+                            <p data-i18n="comp2_desc">They give a burst of motivation for two days. We put a powerful
+                                mentor in your pocket right when your hand reaches for a lighter.</p>
+                        </div>
+                        <div class="comp-item glass">
+                            <h4 data-i18n="comp3_title">❌ Ordinary 'Days Without Smoke' trackers</h4>
+                            <p data-i18n="comp3_desc">They only record the finale and demotivate by resetting to zero at
+                                the slightest mistake. We hold your hand through the hardest stage - the weaning
+                                process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta dark-section text-center p-80">
+        <div class="container">
+            <h2 class="section-title mb-60" data-i18n="cta_title">Start your journey to free lungs and millions of saved
+                nerve cells today.</h2>
+            <a href="#" class="btn-primary glow-btn" data-i18n="hero_cta">Download on the App Store</a>
         </div>
     </section>
 
@@ -121,11 +282,15 @@
 
     <script src="js/i18n.js"></script>
     <script>
-        function scrollCarousel(direction) {
-            const container = document.getElementById('screenshot-scroll');
-            const scrollAmount = 350; // Approximated width of image + gap
-            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-        }
+        document.getElementById('calc-btn').addEventListener('click', () => {
+            const cigs = parseInt(document.getElementById('cigs').value);
+            if (cigs > 0) {
+                // simple fun calculation for the marketing
+                const weeks = Math.max(2, Math.ceil(cigs * 1.5));
+                document.getElementById('calc-weeks').textContent = weeks;
+                document.getElementById('calc-result').style.display = 'block';
+            }
+        });
     </script>
 </body>
 
