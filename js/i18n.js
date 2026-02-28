@@ -6,6 +6,7 @@ const translations = {
     hero_title: "Quit Smoking Without Stress",
     hero_subtitle: "Build a smoke-free life gradually, until the physical and psychological craving disappears without relapses.",
     hero_cta: "Download on the App Store",
+    hero_qr_text: "Scan to Install",
 
     calc_title: "Find out when you will smoke your last cigarette",
     calc_label: "How many cigarettes do you smoke per day?",
@@ -77,6 +78,7 @@ const translations = {
     hero_title: "Бросай курить без стресса",
     hero_subtitle: "Приложение помогает отказаться от сигарет постепенно, пока физическая и психологическая тяга не исчезнет без ломки и срывов.",
     hero_cta: "Скачать в App Store",
+    hero_qr_text: "Наведи камеру для скачивания",
 
     calc_title: "Узнайте, когда вы выкурите свою последнюю сигарету",
     calc_label: "Сколько сигарет вы выкуриваете в день?",
