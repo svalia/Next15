@@ -13,8 +13,8 @@ const translations = {
     calc_title: "Find out when you will smoke your last cigarette",
     calc_label: "How many cigarettes do you smoke per day?",
     calc_btn: "Calculate my freedom plan",
-    calc_res_pre: "Following Next15's gentle intervals, you will become completely independent in ",
-    calc_res_post: " weeks — without harsh withdrawal!",
+    calc_res_pre: "Following Next15's gentle intervals, your Freedom Goal is ",
+    calc_res_post: " — without harsh withdrawal!",
 
     aha_title: "How it works",
     aha_desc: "We don't force you to throw away your pack right now. You will continue to smoke, but each time the interval will imperceptibly increase.",
@@ -87,8 +87,8 @@ const translations = {
     calc_title: "Узнайте, когда вы выкурите свою последнюю сигарету",
     calc_label: "Сколько сигарет вы выкуриваете в день?",
     calc_btn: "Рассчитать мой план",
-    calc_res_pre: "Следуя мягким интервалам Next15, вы станете полностью независимым через ",
-    calc_res_post: " недель — без жестких ломок!",
+    calc_res_pre: "Следуя мягким интервалам Next15, ваша дата свободы — ",
+    calc_res_post: " — без жестких ломок!",
 
     aha_title: "Как это работает",
     aha_desc: "Мы не заставляем вас выбрасывать пачку прямо сейчас. Вы продолжите курить, но с каждым разом интервал будет незаметно увеличиваться.",

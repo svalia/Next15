@@ -71,10 +71,9 @@
                     <button class="btn-primary" id="calc-btn" data-i18n="calc_btn">Calculate my freedom plan</button>
                 </div>
                 <div id="calc-result" class="calc-result" style="display: none;">
-                    <span data-i18n="calc_res_pre">Following Next15's gentle intervals, you will become completely
-                        independent in </span>
-                    <strong id="calc-weeks"></strong>
-                    <span data-i18n="calc_res_post"> weeks — without harsh withdrawal!</span>
+                    <span data-i18n="calc_res_pre">Following Next15's gentle intervals, your Freedom Goal is </span>
+                    <strong id="calc-date"></strong>
+                    <span data-i18n="calc_res_post"> — without harsh withdrawal!</span>
                 </div>
             </div>
         </div>
@@ -293,9 +292,31 @@
         document.getElementById('calc-btn').addEventListener('click', () => {
             const cigs = parseInt(document.getElementById('cigs').value);
             if (cigs > 0) {
-                // simple fun calculation for the marketing
-                const weeks = Math.max(2, Math.ceil(cigs * 1.5));
-                document.getElementById('calc-weeks').textContent = weeks;
+                // Exact replication of iOS 'IntervalCalculator.swift'
+                const targetInterval = 960; // 16 hours
+                const currentIntervalMinutes = Math.floor(960 / Math.max(1, cigs));
+
+                let stepsRemaining = 0;
+                let totalMinutesRemaining = 0;
+
+                if (currentIntervalMinutes < targetInterval) {
+                    const minutesToIncrease = targetInterval - currentIntervalMinutes;
+                    stepsRemaining = Math.ceil(minutesToIncrease / 15);
+
+                    totalMinutesRemaining = (stepsRemaining * currentIntervalMinutes) +
+                        (15 * stepsRemaining * (stepsRemaining - 1) / 2);
+                }
+
+                // Calculate target date
+                const targetDate = new Date();
+                targetDate.setMinutes(targetDate.getMinutes() + totalMinutesRemaining);
+
+                // Format date based on current selected language
+                const currentLang = document.getElementById('lang-select').value || 'en';
+                const options = { day: 'numeric', month: 'long', year: 'numeric' };
+                const formattedDate = targetDate.toLocaleDateString(currentLang, options);
+
+                document.getElementById('calc-date').textContent = formattedDate;
                 document.getElementById('calc-result').style.display = 'block';
             }
         });
