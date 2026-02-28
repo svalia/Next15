@@ -1,8 +1,10 @@
 const translations = {
   en: {
     title: "Next15 - Quit Smoking Without Stress",
-    nav_features: "Features",
-    nav_screenshots: "Screenshots",
+    nav_how: "How it works",
+    nav_calc: "Calculator",
+    nav_method: "Method",
+    nav_faq: "FAQ",
     hero_title: "Quit Smoking Without Stress",
     hero_subtitle: "Build a smoke-free life gradually, until the physical and psychological craving disappears without relapses.",
     hero_cta: "Download on the App Store",
@@ -73,8 +75,10 @@ const translations = {
   },
   ru: {
     title: "Next15 - Бросай курить без стресса",
-    nav_features: "Фичи",
-    nav_screenshots: "Скриншоты",
+    nav_how: "Как это работает",
+    nav_calc: "Калькулятор",
+    nav_method: "Метод",
+    nav_faq: "Вопросы",
     hero_title: "Бросай курить без стресса",
     hero_subtitle: "Приложение помогает отказаться от сигарет постепенно, пока физическая и психологическая тяга не исчезнет без ломки и срывов.",
     hero_cta: "Скачать в App Store",
