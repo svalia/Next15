@@ -1,15 +1,15 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap');
 
 :root {
-    --bg-dark: #000000;
-    --bg-darker: #050505;
-    --bg-section: #0a0a0a;
-    --bg-card: #111111;
-    --bg-card-hover: #161616;
-    --border-subtle: #222222;
-    --border-hover: #333333;
+    --bg-dark: #0f171e;
+    --bg-darker: #0d141a;
+    --bg-section: rgba(28, 200, 230, 0.03);
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-card-hover: rgba(255, 255, 255, 0.08);
+    --border-subtle: rgba(255, 255, 255, 0.05);
+    --border-hover: rgba(255, 255, 255, 0.1);
     --text-main: #FFFFFF;
-    --text-dim: #888888;
+    --text-dim: rgba(255, 255, 255, 0.65);
     --accent-primary: #1CC8E6;
     --accent-cyan: #1CC8E6;
     --accent-green: #23C16B;
