@@ -1,12 +1,11 @@
 const translations = {
   en: {
-    title: "Next15 - Quit Smoking Without Stress",
+    title: "Next15 - Control Nicotine Without Stress",
     nav_how: "How it works",
-    nav_calc: "Calculator",
     nav_method: "Method",
     nav_faq: "FAQ",
-    hero_title: "Quit Smoking Without Stress",
-    hero_subtitle: "Build a smoke-free life gradually, until the physical and psychological craving disappears without relapses.",
+    hero_title: "Control Nicotine Without Stress",
+    hero_subtitle: "Reduce your cigarette consumption gradually, until the physical and psychological craving fades without relapses.",
     hero_cta: "Download on the App Store",
     hero_qr_text: "Scan to Install",
 
@@ -25,14 +24,14 @@ const translations = {
     value4_desc: "Relapsed at a party? The app won't reset your progress, but will offer a short relapse tracker to extract insights and avoid the trap next time.",
 
     recognize_title: "Do you recognize yourself?",
-    recognize_subtitle: "Remember your past attempts to quit. Do you want to finally breathe freely and stop being a slave to your habit?",
+    recognize_subtitle: "Remember your past attempts to control yourself. Do you want to finally breathe freely and manage your habit?",
 
     trigger1_title: "Morning Coffee",
     trigger1_desc: "The perfect 'I won't smoke today' plan crumbles after the first cup of coffee. You feel empty and guilty. Again you relapsed.",
     trigger2_title: "Stressful Work Call",
     trigger2_desc: "Nerves are on edge, your feet carry you outside 'for a dose of nicotine calm'. Patches and pills don't solve the main problem - you physically need to distract yourself.",
 
-    how_title: "How you will quit smoothly and forever",
+    how_title: "How you will take control smoothly and forever",
     how1_title: "Smart Smoking Timer",
     how1_desc: "No more chaos. A clear schedule of smoke breaks with a smooth 15-minute step allows the brain to get used to dose reduction without panic.",
     how2_title: "Widescreen Story Motivators",
@@ -63,7 +62,7 @@ const translations = {
     comp3_title: "❌ Ordinary 'Days Without Smoke' trackers",
     comp3_desc: "They only record the finale and demotivate by resetting to zero at the slightest mistake. We hold your hand through the hardest stage - the weaning process.",
 
-    cta_title: "Start now and following interval smoking you will become free from nicotine by {date}.",
+    cta_title: "Start now and following interval smoking you will take full control of your nicotine consumption by {date}.",
     cta_btn: "Start",
 
     footer_terms: "Terms of Use",
@@ -71,13 +70,12 @@ const translations = {
     footer_processing: "Personal Data Processing"
   },
   ru: {
-    title: "Next15 - Бросай курить без стресса",
+    title: "Next15 - Снижай потребление никотина без стресса",
     nav_how: "Как это работает",
-    nav_calc: "Калькулятор",
     nav_method: "Метод",
     nav_faq: "Вопросы",
-    hero_title: "Бросай курить без стресса",
-    hero_subtitle: "Приложение помогает отказаться от сигарет постепенно, пока физическая и психологическая тяга не исчезнет без ломки и срывов.",
+    hero_title: "Снижайте потребление никотина без стресса",
+    hero_subtitle: "Приложение помогает контролировать привычку постепенно, пока физическая и психологическая тяга не снизится без ломки и срывов.",
     hero_cta: "Скачать в App Store",
     hero_qr_text: "Наведи камеру для скачивания",
 
@@ -96,14 +94,14 @@ const translations = {
     value4_desc: "Сорвались на вечеринке? Мы не обнуляем прогресс, а предлагаем трекер срыва, чтобы вытащить инсайт и обойти ловушку в будущем.",
 
     recognize_title: "Узнаешь себя?",
-    recognize_subtitle: "Вспомни свои прошлые попытки бросить. Ты хочешь наконец-то вздохнуть полной грудью и перестать быть рабом привычки?",
+    recognize_subtitle: "Вспомни свои прошлые попытки контролировать себя. Ты хочешь наконец-то вздохнуть полной грудью и научиться управлять привычкой?",
 
     trigger1_title: "Чашка кофе",
     trigger1_desc: "Идеальный план 'сегодня не курю' рушится. Опустошение и вина. Снова сорвался. Снова показал себе, что нет силы воли.",
     trigger2_title: "Сложный созвон",
     trigger2_desc: "Нервы на пределе, ноги сами несут на балкон. Пластыри не решают проблему — тебе физически нужно отвлечься и 'повертеть что-то в руках'.",
 
-    how_title: "За счёт чего мы навсегда избавим вас от курения",
+    how_title: "За счёт чего мы поможем вам взять привычку под контроль",
     how1_title: "Умный таймер курения",
     how1_desc: "Чёткий график перекуров с плавным шагом в 15 минут позволяет мозгу привыкнуть к снижению дозы без паники.",
     how2_title: "Формат Story-Мотиваторов",
@@ -134,7 +132,7 @@ const translations = {
     comp3_title: "❌ Обычные счетчики 'Дней без дыма'",
     comp3_desc: "Они демотивируют полным обнулением при малейшей ошибке. Забудьте про счетчики! Мы ведем вас за руку на процессе отвыкания.",
 
-    cta_title: "Начни сейчас и, следуя интервальному курению, ты станешь свободным от никотина уже к {date}.",
+    cta_title: "Начни сейчас и, следуя интервальному курению, ты возьмешь свою привычку под полный контроль уже к {date}.",
     cta_btn: "Начать",
 
     footer_terms: "Условия использования",
